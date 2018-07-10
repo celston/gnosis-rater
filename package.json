@@ -5,7 +5,7 @@
   "author": "Chris Elston <celston@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "concurrently \"nuxt\" \"nodemon ./api\"",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "bootstrap-vue": "^2.0.0-rc.11",
+    "mongoose": "^5.2.2",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {

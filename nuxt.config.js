@@ -13,13 +13,20 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
   modules: [
     'bootstrap-vue/nuxt'
   ],
+
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+
+  serverMiddleware: [
+    '~/api/index.js'
+  ],
+
   /*
   ** Build configuration
   */
@@ -36,6 +43,7 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    watch: ['api']
   }
 }
